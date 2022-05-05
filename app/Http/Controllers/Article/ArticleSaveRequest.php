@@ -34,7 +34,7 @@ class ArticleSaveRequest extends FormRequest
     public function rules()
     {
         return [
-            'original_id' => 'required|integer',
+            'original_id' => 'required|integer|unique:articles,original_id',
             'title' => 'required|string',
             'url' =>  'required|string',
             'image_url' => 'required|string',

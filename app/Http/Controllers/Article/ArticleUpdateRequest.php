@@ -34,7 +34,7 @@ class ArticleUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'original_id' => 'nullable|integer',
+            'original_id' => 'nullable|integer|unique:articles,original_id',
             'title' => 'nullable|string',
             'url' =>  'nullable|string',
             'image_url' => 'nullable|string',
